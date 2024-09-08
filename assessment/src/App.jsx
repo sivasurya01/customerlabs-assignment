@@ -89,6 +89,7 @@ function App() {
             handleAddRow={handleAddRow}
             handleSchemaChange={handleSchemaChange}
             selectedSchema={selectedSchema}
+            setRowCount={setRowCount}
           />
         )}
       </div>

@@ -19,6 +19,7 @@ function Sidebar({
   selectedSchema,
   handleSchemaChange,
   handleAddRow,
+  setRowCount,
   handleAddSegement,
 }) {
   return (
@@ -80,7 +81,17 @@ function Sidebar({
                           </div>
                         </Col>
                         <Col lg={9} md={9} sm={9}>
-                          <Form.Select id={`dropdown-${index}`}>
+                          <Form.Select
+                            id={`dropdown-${index}`}
+                            onChange={(e) => {
+                              const selectedValue = e.target.value;
+                              const selectedOption = index == selectedValue;
+                              // setRowCount((prevRowCount) => [
+                              //   ...prevRowCount,
+                              //   selectedOption,
+                              // ]);
+                            }}
+                          >
                             {schemaOptions.map((option, optionIndex) => (
                               <option
                                 key={optionIndex}
