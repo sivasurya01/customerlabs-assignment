@@ -86,10 +86,6 @@ function Sidebar({
                             onChange={(e) => {
                               const selectedValue = e.target.value;
                               const selectedOption = index == selectedValue;
-                              // setRowCount((prevRowCount) => [
-                              //   ...prevRowCount,
-                              //   selectedOption,
-                              // ]);
                             }}
                           >
                             {schemaOptions.map((option, optionIndex) => (
